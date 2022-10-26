@@ -50,7 +50,7 @@ keySection:AddButton({
 if _G.KeyImput == _G.Key then
         YourScripthub()
         else
-        print("wrong key bro :(")
+        print("wrong key bro :("
     end    
 })
   
@@ -76,7 +76,24 @@ if _G.KeyImput == _G.Key then
 	Default = false,
 	Callback = function(Value)
 		player:kick("haha kicked by: "..player.Name)
-	end    
+	end
+
+keySection:AddButton({
+	Name = "kick player",
+	Callback = function()
+if _G.KeyImput == _G.Key then
+ 
+    end    
+})
+  
+  keySection:AddTextbox({
+	Name = "choose the player",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyImput = Value
+	end	  
+})
 })
     end
   
